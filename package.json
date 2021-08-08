@@ -1,0 +1,17 @@
+{
+  "name": "z1zon-ui",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "https://github.com/z1zon/z1zon-ui.git",
+  "authors": [
+    {
+      "name": "Chanyeong Cho",
+      "email": "cyjo9603@naver.com"
+    },
+    {
+      "name": "Jihoon Oh",
+      "email": "hihiwwg@gmail.com"
+    }
+  ],
+  "license": "MIT"
+}
