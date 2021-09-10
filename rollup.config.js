@@ -9,6 +9,8 @@ import alias from '@rollup/plugin-alias';
 import dts from 'rollup-plugin-dts';
 import babel from '@rollup/plugin-babel';
 import postcss from 'rollup-plugin-postcss';
+import autoprefixer from 'autoprefixer';
+import postcssPrefixer from 'postcss-prefixer';
 
 import path from 'path';
 
@@ -33,6 +35,7 @@ export default [
       postcss({
         modules: true,
         extract: path.resolve(__dirname, './dist/style.css'),
+        plugins: [autoprefixer(), postcssPrefixer({ prefix: 'z1zon-' })],
       }),
       image(),
       url(),
