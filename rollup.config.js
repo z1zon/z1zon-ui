@@ -8,6 +8,7 @@ import { terser } from 'rollup-plugin-terser';
 import alias from '@rollup/plugin-alias';
 import dts from 'rollup-plugin-dts';
 import babel from '@rollup/plugin-babel';
+import postcss from 'rollup-plugin-postcss';
 
 import path from 'path';
 
@@ -29,6 +30,10 @@ export default [
         sourceMap: false,
       }),
       resolve({ extensions }),
+      postcss({
+        modules: true,
+        extract: path.resolve(__dirname, './dist/style.css'),
+      }),
       image(),
       url(),
       terser(),
