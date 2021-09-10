@@ -12,6 +12,7 @@ import postcss from 'rollup-plugin-postcss';
 import bundleScss from 'rollup-plugin-bundle-scss';
 import autoprefixer from 'autoprefixer';
 import postcssPrefixer from 'postcss-prefixer';
+import del from 'rollup-plugin-delete';
 
 import path from 'path';
 
@@ -23,6 +24,7 @@ export default [
     output: [{ file: 'dist/index.js', format: 'cjs' }],
 
     plugins: [
+      del({ targets: 'dist/*' }),
       alias({
         entries: [{ find: '@', replacement: path.resolve(__dirname, 'src') }],
       }),
