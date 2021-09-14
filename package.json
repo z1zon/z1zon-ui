@@ -17,7 +17,8 @@
     "build": "rollup -c",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "test": "jest --config=jest.config.js"
+    "test": "jest --config=jest.config.js",
+    "test:generate-output": "jest --json --outputFile=.jest-test-results.json"
   },
   "license": "MIT",
   "devDependencies": {
@@ -33,6 +34,7 @@
     "@storybook/addon-actions": "^6.3.8",
     "@storybook/addon-controls": "^6.3.8",
     "@storybook/addon-essentials": "^6.3.8",
+    "@storybook/addon-jest": "^6.3.8",
     "@storybook/addon-links": "^6.3.8",
     "@storybook/react": "^6.3.8",
     "@types/jest": "^27.0.1",
