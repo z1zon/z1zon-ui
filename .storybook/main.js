@@ -1,4 +1,5 @@
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+const path = require('path');
 
 module.exports = {
   core: {
@@ -14,6 +15,14 @@ module.exports = {
     '@storybook/addon-essentials',
     '@storybook/addon-controls',
     '@storybook/addon-jest',
+    {
+      name: '@storybook/preset-scss',
+      options: {
+        cssLoaderOptions: {
+          modules: { localIdentName: '[name]__[local]--[hash:base64:5]' },
+        },
+      },
+    },
   ],
   typescript: {
     check: false,
